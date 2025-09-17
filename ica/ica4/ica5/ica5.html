@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+.card-header {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+justify-content: center;
+align-items: center;
+font-family: Helvetica, sans-serif;
+}
+
+h3 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+button {
+    height: 4rem;
+    width: 15rem;
+    border-radius: 20%; 
+    background-color: #b89c84;
+}
+
+button:hover {
+  border: 5px solid black; 
+}
+
+.card-content {
+
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    text-align: center;
+    border: .25rem; 
+    
+}
+
+
+ </style>
+
+
+</head>
+
+
+
+<body>
+    <div class = "center-text"> 
+
+<div class="card">
+  <div class="card-header">
+    <h3 tabindex="1">Community Garden Project</h3>
+    <button class="expand-btn" aria-label="Expand card">+</button>
+  </div>
+  <div class="card-content">
+    <div class="details" style = "display: none;">
+
+    <p tabindex="2" class="summary">Join neighbors in creating a shared growing space...</p>
+    
+    
+      <p tabindex="3">Meeting every Saturday at 10am. Tools provided. All skill levels welcome.</p>
+      <p tabindex="4">Contact: garden@community.org</p>
+
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+let info = false;
+
+const expandBtn = document.querySelector('.expand-btn');
+const details = document.querySelector('.details');
+
+expandBtn.addEventListener('click', showInfo)
+
+function showInfo() {
+if (info == false)
+{
+details.style.display = 'block';
+expandBtn.textContent = '-';
+info = true;
+}
+else{ 
+details.style.display = 'none';
+expandBtn.textContent = '+';
+info = false;
+
+}
+}
+
+
+</script>
+
+
+
+</body>
+</html>
