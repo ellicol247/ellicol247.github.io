@@ -1,0 +1,105 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em; 
+  background-color: #00d9ff; 
+  flex-wrap: wrap;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 2vw;
+}
+
+.nav-menu.show {
+  display: flex;
+}
+
+
+
+
+
+/* Hamburger icon lines */
+.nav-toggle span {
+  display: block;
+  height: 4px;
+  background-color: black;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+.nav-brand{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+/* Style nav links with padding and hover */
+.nav-menu a {
+  padding: 0.5em 1em;
+  color: black;
+  font-weight: bold;
+  transition: background-color;
+}
+
+.nav-menu a:hover {
+  background-color: #49df2b;
+  border-radius: 4px;
+}
+
+
+/* Hamburger button base styles */
+.nav-toggle {
+  display: none; /* hide on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+  background-color: #e0e0e0; 
+  border-radius: 6px;
+  outline: none; 
+}
+
+.nav-toggle.open {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+
+
+@media  (max-width: 768px) {
+
+.nav-toggle{
+    display: flex;
+}
+
+
+  .nav-menu {
+    display: none; 
+    flex-direction: column;
+    width: 100%;
+    background-color: #00d9ff;
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    padding: 1em 0;
+    margin: 0;
+
+  }
+
+
+
+
+    
+}
