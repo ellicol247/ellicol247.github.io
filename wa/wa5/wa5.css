@@ -20,7 +20,6 @@
 
 
 
-/* Hamburger icon lines */
 .nav-toggle span {
   display: block;
   height: 4px;
@@ -36,7 +35,7 @@ align-items: center;
 
 }
 
-/* Style nav links with padding and hover */
+
 .nav-menu a {
   padding: 0.5em 1em;
   color: black;
@@ -50,9 +49,9 @@ align-items: center;
 }
 
 
-/* Hamburger button base styles */
+
 .nav-toggle {
-  display: none; /* hide on desktop */
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 44px;
