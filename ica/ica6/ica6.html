@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ica6.css">
+</head>
+<body>
+    
+    <div class="gallery-container">
+  <header class="gallery-header">Photo Gallery</header>
+  <nav class="gallery-nav">
+    <button>All</button>
+    <button>Nature</button>
+    <button>Architecture</button>
+  </nav>
+
+  
+  <main class="gallery-grid">
+  <div class="photo-card" data-category="nature">Photo 1</div>
+  <div class="photo-card" data-category="architecture">Photo 2</div>
+  <div class="photo-card" data-category="nature">Photo 3</div>
+  <div class="photo-card featured" data-category="nature">Featured Photo</div>
+  <div class="photo-card" data-category="architecture">Photo 5</div>
+  <div class="photo-card" data-category="nature">Photo 6</div>
+</main>
+
+
+  <aside class="gallery-sidebar">Filter Options</aside>
+</div>
+
+<script>
+// get all the filter buttons
+const filterButtons = document.querySelectorAll('.gallery-nav button');
+
+// get all the photo cards
+const photoCards = document.querySelectorAll('.photo-card');
+
+// add a click event to all buttons
+filterButtons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    const filterValue = event.target.textContent.toLowerCase();
+    filterPhotos(filterValue);
+  });
+});
+
+// function to filter photos by category
+function filterPhotos(category) {
+  photoCards.forEach(card => {
+    const cardCategory = card.dataset.category;
+
+    // show all if all is clicked or match category
+    if (category === 'all' || cardCategory === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+
+</script>
+
+</body>
+</html>
