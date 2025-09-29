@@ -1,0 +1,40 @@
+/* Simple grid layout */
+.simple-grid {
+  display: grid;
+  grid-template-areas: "sidebar main";
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #ccc;
+}
+
+/* left sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #eaeaea;
+  padding: 1rem;
+}
+
+/* right column */
+.main-content {
+  grid-area: main;
+  padding: 1rem;
+}
+
+/* phone screen */
+@media (max-width: 600px) {
+  .simple-grid {
+    grid-template-areas:
+      "main"
+      "sidebar";
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    margin-top: 1rem;
+  }
+}
+

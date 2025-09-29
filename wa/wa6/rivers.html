@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CU Fly Fishing Club - Rivers</title>
+  <link rel="stylesheet" href="wa6.css" />
+  <link rel="stylesheet" href="rivers.css" />
+</head>
+<body>
+
+  <nav class="main-nav">
+    <div class="nav-brand" tabindex="1">CU Fly Fishing Club - Rivers</div>
+    <button class="nav-toggle" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="wa6.html" tabindex="2">Home</a></li>
+      <li><a href="calendar.html" tabindex="3">Calendar</a></li>
+      <li><a href="gear-rental.html" tabindex="4">Gear Rental</a></li>
+      <li><a href="rivers.html" tabindex="5">Rivers</a></li>
+    </ul>
+  </nav>
+
+  <nav class="distance-filter">
+    <button data-filter="all">All</button>
+    <button data-filter="short">0-20 miles</button>
+    <button data-filter="medium">20-50 miles</button>
+    <button data-filter="long">50+ miles</button>
+  </nav>
+
+  <main>
+
+    <div class="row" data-distance="short">
+      <div class="photo-card">
+        <img src="../../img/SouthBoulder Creek.jpg" alt="South Boulder Creek" />
+      </div>
+      <div class="paragraph">
+        <h2>South Boulder Creek</h2>
+        <p>Only 10 miles from Boulder, great dry fly action and easy access near Eldorado Canyon.</p>
+      </div>
+    </div>
+
+    <div class="row reverse" data-distance="medium">
+      <div class="photo-card">
+        <img src="../../img/StVrain.jpg" alt="St. Vrain Creek" />
+      </div>
+      <div class="paragraph">
+        <h2>St. Vrain Creek</h2>
+        <p>About 30 miles from Boulder, known for scenic canyon fishing and diverse hatches.</p>
+      </div>
+    </div>
+
+    <div class="row" data-distance="long">
+      <div class="photo-card">
+        <img src="../../img/BlueRiver.jpg" alt="Blue River" />
+      </div>
+      <div class="paragraph">
+        <h2>Blue River</h2>
+        <p>Roughly 70 miles away, a classic tailwater fishery with good midge and nymph action.</p>
+      </div>
+    </div>
+
+    <div class="row reverse" data-distance="long">
+      <div class="photo-card">
+        <img src="../../img/ColoradoRiver.jpg" alt="Colorado River" />
+      </div>
+      <div class="paragraph">
+        <h2>Colorado River</h2>
+        <p>Just under 100 miles from Boulder, big water and big fish, best floated by raft.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.distance-filter button');
+    const rows = document.querySelectorAll('main .row');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+
+        rows.forEach(row => {
+          if (filter === 'all' || row.dataset.distance === filter) {
+            row.style.display = 'grid';  // Keep grid display
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
