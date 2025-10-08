@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="wa6.css" />
   <link rel="stylesheet" href="rivers.css" />
 </head>
+
+<script src="wa6.js" defer></script>
 <body>
 
   <nav class="main-nav">
@@ -83,7 +85,7 @@
 
         rows.forEach(row => {
           if (filter === 'all' || row.dataset.distance === filter) {
-            row.style.display = 'grid';  // Keep grid display
+            row.style.display = 'grid';  // keep grid display
           } else {
             row.style.display = 'none';
           }

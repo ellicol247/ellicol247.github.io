@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="wa5.css">
 </head>
 
+
+
 <body>
     
 <nav class="main-nav">
@@ -33,10 +35,61 @@
 </a>
 
 
-<script src="wa5.js" defer></script> 
+
+
+<style>
+.light {
+
+background-color: white;
+color: black;
+}
+
+.dark{
+background-color: black;
+color: white;
+}
+</style>
 
 
 
+  <button id="theme">Toggle Theme</button>
+
+<script>
+
+let btn = document.querySelector('#theme').addEventListener('click', theme);
+
+function theme() {
+  // get the current theme from body class if not set to light
+  let currentTheme = document.body.className || 'light';
+
+  // pass the current theme to function that will switch it
+  setTheme(currentTheme);
+}
+
+// Saves the theme choice and updates page
+function setTheme(theme) {
+  let inTheme = theme;
+
+if (inTheme == 'dark') {
+  theme = 'light'
+}
+else {
+  theme = 'dark'
+}
+
+
+// saves to local storage
+    localStorage.setItem('userTheme', theme);
+    document.body.className = theme;
+}
+
+// Load saved theme on page load
+window.addEventListener('load', function() {
+    const savedTheme = localStorage.getItem('userTheme') || 'light';
+    document.body.className = savedTheme;
+});
+
+</script>
     
 </body>
 </html>

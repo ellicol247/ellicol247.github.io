@@ -1,4 +1,17 @@
-/* Simple grid layout */
+.paragraph p, .sidebar, .main-content {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+
+/* simple grid layout */
 .simple-grid {
   display: grid;
   grid-template-areas: "sidebar main";
@@ -36,5 +49,19 @@
   .sidebar {
     margin-top: 1rem;
   }
+}
+
+body.dark .simple-grid {
+  background-color: #333;
+  border: 1px solid #666;
+}
+
+body.dark .sidebar {
+  background-color: #444;
+}
+
+body.dark .main-content,
+body.dark .sidebar {
+  color: white;
 }
 

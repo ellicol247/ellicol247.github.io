@@ -1,3 +1,22 @@
+body {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.nav-menu a {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+
+
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -101,4 +120,46 @@ align-items: center;
 
 
     
+}
+
+
+
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: #222;
+  color: white;
+}
+
+#theme-toggle {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+
+.theme-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.theme-controls button {
+  padding: 0.5em 1.2em;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.theme-controls label {
+  font-size: 1rem;
+  text-align: center;
 }
