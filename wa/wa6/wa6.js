@@ -13,9 +13,7 @@ navToggle.addEventListener('click', () => {
   navToggle.setAttribute('aria-expanded', !isExpanded);
 });
 
-// --- THEME TOGGLER SETUP ---
-
-// Load saved theme on page load
+// load saved theme on page load
 window.addEventListener('load', function () {
   const savedTheme = localStorage.getItem('userTheme') || 'light';
   document.body.className = savedTheme;
@@ -26,7 +24,7 @@ window.addEventListener('load', function () {
   }
 });
 
-// Function to toggle theme
+// function to toggle theme
 function toggleTheme() {
   let currentTheme = document.body.className || 'light';
   let newTheme = currentTheme === 'dark' ? 'light' : 'dark';

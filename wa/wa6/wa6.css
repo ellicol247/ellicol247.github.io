@@ -163,3 +163,36 @@ body.dark {
   font-size: 1rem;
   text-align: center;
 }
+
+
+/* intro section on home page */
+.home-intro {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.home-intro p {
+  margin-top: 1rem;
+}
+
+body.dark .home-intro {
+  color: white;
+}
+
+
+.intro-box {
+  background-color: #eee;  
+  padding: 1rem 1.2rem;    
+  border-radius: 5px;      
+  max-width: 800px;        
+  margin: 2rem auto;   
+}
+
+
+
+body.dark .intro-box {
+  background-color: #333; 
+  color: white;
+}

@@ -1,0 +1,57 @@
+.gear-container p,
+.gear-container h1,
+.gear-container h2 {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.gear-container h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.gear-container h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.rental-notice {
+  text-align: center;
+  margin: 2rem auto 1rem;
+  max-width: 700px;
+  padding: 0 1rem;
+}
+
+/* grid layout */
+.gear-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+/* style for each gear item */
+.gear-item {
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* contact section */
+.gear-request {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 1.1rem;
+}
+
+
+body.dark .gear-item {
+  background-color: #333;
+  color: white;
+}
+
+body.dark .gear-request {
+  color: white;
+}

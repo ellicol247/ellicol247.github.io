@@ -22,6 +22,7 @@ h2 {
   padding: 1rem;
   background: white;
   border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 /* left sidebar */
@@ -29,6 +30,7 @@ h2 {
   grid-area: sidebar;
   background-color: #eaeaea;
   padding: 1rem;
+  border-radius: 5px;
 }
 
 /* right column */
