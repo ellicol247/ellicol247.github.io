@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Random Dog Facts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="wa10.css" />
 </head>
 <body>
   <div class="app">
     <header>Random Dog Facts</header>
+
     <section class="quotes">
       <div class="quote-text" id="js-quote-text"></div>
       <div class="quote-text" id="js-answer-text"></div>
       <img id="js-fish-img" class="fish-img" src="" alt="Random Dog" />
     </section>
+
     <section class="controls">
       <button type="button" id="js-new-quote" class="new-quote button">
         Show me a random dog!
@@ -24,6 +26,21 @@
       </button>
     </section>
   </div>
+
+  <section class="explanation">
+    <p>
+      <strong>Extension:</strong> I extended the quote machine by combining two APIs because the first one did'nt have a fact and I needed an extension. 
+      My extension is the random image. I tried to add random dog facts but couldnt find a working API. 
+    </p>
+
+    <p>
+      <strong>API in Critique Project:</strong> In my critique project I could possibly use YouTubes Data API to collect data
+about videos although I dont know if it is accessable without authentification. I could then simulate how the
+recommendation system might behave for different types of users. Using this data I can build an interface that allows users to set filters 
+and see how the recommended content would change.
+    </p>
+  </section>
+
   <script src="wa10.js"></script>
 </body>
 </html>
