@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="wa12.css" />
+</head>
+<body>
+  <div class="app">
+    <header>Weather Dashboard</header>
+
+    <section class="controls">
+      <label for="privacy-select">Choose location method:</label>
+      <select id="privacy-select">
+        <option value="manual">Manual City Entry</option>
+        <option value="city">City-Level</option>
+        <option value="precise">Exact Location</option>
+      </select>
+
+
+            <div id="manual-entry">
+        <label for="city-input">City Name:</label>
+        <input type="text" id="city-input" placeholder="Enter city name" />
+    <button id="get-weather">Get Weather</button>
+    </div>
+
+      <div class="unit-toggle">
+        <button id="unit-switch">Switch to °F</button>
+      </div>
+    </section>
+
+    <section class="weather-display">
+      <div id="weather-output"></div>
+    </section>
+  </div>
+
+  <script src="wa12.js"></script>
+</body>
+</html>
