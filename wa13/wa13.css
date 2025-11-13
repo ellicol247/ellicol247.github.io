@@ -1,0 +1,197 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #b2ebf2, #e0f7fa);
+  margin: 0;
+  padding: 40px;
+  transition: background 0.5s ease;
+}
+
+.app {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+
+header {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #01579b;
+  margin-bottom: 30px;
+}
+
+
+.controls {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+select,
+input[type="text"],
+button {
+  font-size: 1.1em;
+  padding: 12px;
+  margin-top: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: #0288d1;
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0277bd;
+  transform: translateY(-2px);
+}
+
+.unit-toggle {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.weather-display {
+  background: #f1f8e9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#weather-output h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  color: #0277bd;
+}
+
+
+.saved-cities {
+  margin-top: 30px;
+}
+
+.saved-cities h3 {
+  text-align: center;
+  color: #01579b;
+  margin-bottom: 10px;
+}
+
+#saved-cities-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.saved-card {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 8px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.saved-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.city-name {
+  cursor: pointer;
+  color: #0277bd;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.city-name:hover {
+  color: #01579b;
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #d32f2f;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  color: #b71c1c;
+}
+
+
+
+/* larger screen */
+@media (max-width: 900px) {
+  body {
+    padding: 30px;
+  }
+
+  .app {
+    max-width: 700px;
+    padding: 30px;
+  }
+
+  header {
+    font-size: 1.8em;
+  }
+}
+
+/* small screens */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  .app {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  header {
+    font-size: 1.6em;
+  }
+
+  select,
+  input[type="text"],
+  button {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  #weather-output h2 {
+    font-size: 1.4em;
+  }
+
+  .saved-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
